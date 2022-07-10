@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Quality</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+    <div1 style = "display:flexbox; width:100% "><br><br><br>
+        <h1 class="header" > Wine Quality Prediction</h1>
+    </div1>
+
+    <form action="{{ url_for('main_page')}}"method="post">
+		<div class = "big_container">
+        	<div class = "small_container">
+				<select type="text" id="Type" name="Type" required="required">
+					<option value="0">Red</option>
+      				<option value="1">White</option>
+				</select>
+				<section class="title" >Type of Wine</section>
+			</div>
+			<div class = "small_container">
+    			<input type="range" id="Fixed Acidity" name="Fixed Acidity" required="required" min="400" max="1200" oninput="this.nextElementSibling.value = this.value/100" >
+    			<output for="Fixed Acidity">8</output>
+				<section class="title">Fixed Acidity (4 to 12)<section>
+			</div>
+			<div class = "small_container">
+    			<input type="range" id="Volatile Acidity" name="Volatile Acidity" required="required" min="0" max="100" oninput="this.nextElementSibling.value = this.value/100" >
+    			<output for="Volatile Acidity">0.50</output>
+				<section class="title">Volatile Acidity (0 to 1)</section>
+			</div>
+			<div class = "small_container">
+    			<input type="range" id="Citric Acidity" name="Citric Acid" required="required" min="0" max="50" oninput="this.nextElementSibling.value = this.value/100">
+				<output for="Citric Acid">0.25</output>
+				<section class="title">Citric Acid (0 to 0.5)</section>
+			</div>
+			<div class = "small_container">
+    			<input type="range" id="Residual Sugar" name="Residual Sugar" required="required" min="100" max="2000" oninput="this.nextElementSibling.value = this.value/100" >
+    			<output for="Residual Sugar">10.5</output>
+				<section class = "title">Residual Sugar (1 to 20)</section>
+			</div>
+			<div class = "small_container">				
+    			<input type="range" id="Chlorides" name="Chlorides" required="required" min="0" max="10" oninput="this.nextElementSibling.value = this.value/100" >
+    			<output for="Chlorides">0.05</output>
+				<section class="title">Chlorides (0 to 0.1)</section>
+			</div>
+			<div class = "small_container">
+				<input type="range" id="Free Sulfur" name="Free Sulfur" required="required" min="0" max="7000" oninput="this.nextElementSibling.value = this.value/100" >
+				<output for="Free Sulfur">35</output>
+				<section class="title">Free Sulfur (0 to 70)</section>
+			</div>
+			<div class="small_container">
+    			<input type="range" id="pH" name="pH" required="required" min="200" max="400" oninput="this.nextElementSibling.value = this.value/100" >
+    			<output for="pH">3</output>
+				<section class="title">pH (2 to 4)</section>
+			</div>
+			<div class="small_container">
+    			<input type="range" id="sulphates" name="sulphates" required="required" min="0" max="100" oninput="this.nextElementSibling.value = this.value/100" >
+	    		<output for="sulphates">0.50</output>
+				<section class="title">Sulphates (0 to 1)</section>
+			</div>
+			<div class="small_container">
+				<input type="range" id="alcohol" name="alcohol" required="required" min="0" max="1500" oninput="this.nextElementSibling.value = this.value/100" >
+				<output for="alcohol">11.50</output>
+				<section class="title">Alcohol (8 to 15)</section>
+			</div>
+		</div>
+		<button type="submit" class=" btn btn-primary btn-block btn-large">Go !!</button>
+        </form>
+
+</body>
+</html>

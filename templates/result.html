@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Quality</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+    <div1 style = "display:flexbox; width:100% "><br><br><br>
+        <h1 class="header" > Wine Quality Prediction</h1>
+    </div1>
+	<div class="result" id="res" style="color: {{color}} ;" >{{ result }}</div>
+    <a href="{{ url_for('main_page') }}"> <button class=" btn btn-primary btn-block btn-large">Go Back</button> </a>
+</body>
+</html>
